@@ -11,6 +11,9 @@ COPY run_benchmark.sh /run_benchmark.sh
 RUN chmod +x /run_benchmark.sh  
 
 # Punto de entrada
-ENTRYPOINT ["/run_benchmark.sh"]
+ENTRYPOINT ["dockerd-entrypoint.sh"]
+CMD ["/run_benchmark.sh"]
+
+
 
 
